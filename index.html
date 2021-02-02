@@ -3,9 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Guessing the number</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Guess The Number</title>
   </head>
   <body>
-    <!-- Start from 0: 2021-02-02 : 19:20-->
+    <!-- Start from zero: 2021-02-02 : 19:20-->
+    <!-- Done: 2021-02-02 : 21:19 -->
+    <div class="first">
+      <h1>Guess The Number</h1>
+      <p>(1 - 10)</p>
+      <h2 class="random">?</h2>
+      <input type="number" min="0" max="10" class="number" />
+      <button class="guess">Guess</button>
+    </div>
+    <div class="second">
+      <p class="texts">------</p>
+      <p>Current Score: <span class="score">10</span></p>
+      <p>Highscore: <span class="highscore">0</span></p>
+      <button class="reset">Start Over</button>
+    </div>
   </body>
 </html>

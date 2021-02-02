@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+input {
+  margin-top: 1rem;
+  align-self: center;
+  width: 10rem;
+  height: 5rem;
+  border: 2px solid black;
+  font-size: 4rem;
+  text-align: center;
+}
+
+p,
+span,
+button {
+  font-size: 2rem;
+}
+
+.second {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+button {
+  margin-top: 1rem;
+  height: 4rem;
+  width: 10rem;
+  align-self: center;
+}
+
+.random {
+  margin-top: 1rem;
+  font-size: 5rem;
+  background-color: beige;
+  width: 10rem;
+  align-self: center;
+}
