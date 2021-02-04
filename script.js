@@ -213,7 +213,7 @@ btnReset.addEventListener("click", resetClicked);
 
 //Functions
 function guessClicked() {
-  const newGuess = Number(document.querySelector(".number").value);
+  let newGuess = Number(document.querySelector(".number").value);
   if (!newGuess) {
     newText("Please write a numbers");
   } else if (newGuess === random) {
@@ -256,4 +256,31 @@ function resetClicked() {
   score.textContent = 10;
   document.querySelector(".number").value = "";
   background.style.backgroundColor = "#FFFFFF";
+  document.querySelector(".random").textContent = "?";
 }
+
+// Just testing out a function in my mind:
+// FAILED
+
+// document.addEventListener("keydown", function (button) {
+//   let auto = document.querySelector(".number");
+//   console.log(Number(auto.value));
+//   if (button.key === "Enter") {
+//     guessClicked();
+//   } else if (!Number(auto.value) && button.key !== "0") {
+//     auto.value = button.key;
+//   } else if (button.key > 0) {
+//     auto.value = button.key;
+//   } else if (button.key === "0") {
+//     auto.value = 10;
+//   }
+// });
+
+// Trying something else:
+document.addEventListener("keydown", function (button) {
+  let auto = document.querySelector(".number");
+  if (auto.value > 0 && button.key === "Enter") {
+    guessClicked();
+    auto.value = "";
+  }
+});
