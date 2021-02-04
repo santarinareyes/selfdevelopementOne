@@ -194,9 +194,6 @@
 let random = document.querySelector(".random").value;
 random = Math.trunc(Math.random() * 10 + 1);
 
-const btnGuess = document.querySelector(".guess");
-const texts = document.querySelector(".texts");
-
 let score = document.querySelector(".score");
 score.textContent = 10;
 
@@ -204,8 +201,10 @@ const highscore = document.querySelector(".highscore");
 highscore.textContent = 0;
 
 const background = document.querySelector("body");
-
 const btnReset = document.querySelector(".reset");
+const btnGuess = document.querySelector(".guess");
+const texts = document.querySelector(".texts");
+const onoff = document.querySelector(".number");
 
 //Listeners
 btnGuess.addEventListener("click", guessClicked);
@@ -221,6 +220,7 @@ function guessClicked() {
     newHighscore();
     newBody();
     document.querySelector(".random").textContent = random;
+    onoff.disabled = true;
   } else if (score.textContent > 1) {
     newText(newGuess > random ? "Guess is too high" : "Guess is too low");
     newScore();
@@ -228,6 +228,7 @@ function guessClicked() {
     score.textContent = 0;
     newText("You lost!");
     newBody();
+    onoff.disabled = true;
   }
 }
 
@@ -257,6 +258,8 @@ function resetClicked() {
   document.querySelector(".number").value = "";
   background.style.backgroundColor = "#FFFFFF";
   document.querySelector(".random").textContent = "?";
+  newText("Good luck!");
+  onoff.disabled = false;
 }
 
 // Just testing out a function in my mind:
@@ -282,5 +285,7 @@ document.addEventListener("keydown", function (button) {
   if (auto.value > 0 && button.key === "Enter") {
     guessClicked();
     auto.value = "";
+  } else if (!auto.value) {
+    guessClicked();
   }
 });
