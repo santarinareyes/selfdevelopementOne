@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
+    <script src="modal.js" defer></script>
     <title>Guess The Number</title>
   </head>
   <body>
@@ -33,6 +34,17 @@
       <p>Current Score: <span class="score">10</span></p>
       <p>Highscore: <span class="highscore">0</span></p>
       <button class="reset">Start Over</button>
+      <button class="rules">Rules</button>
     </div>
+
+    <div class="modal hide">
+      <h1>Rules:</h1>
+      <p>I am just haviing fun.</p>
+      <p>Escape key should work to close this window :)</p>
+      <p>So does clicking on the blur :)</p>
+      <p>And of course the close button.</p>
+      <button class="close">Close</button>
+    </div>
+    <div class="blur hide"></div>
   </body>
 </html>

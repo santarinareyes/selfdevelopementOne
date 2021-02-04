@@ -109,12 +109,10 @@
 
 ///////////////////////////////////////////////////////
 // Variables
-let random = (document.querySelector(".random").value = Math.trunc(
-  Math.random() * 10 + 1
-));
-console.log(random);
-const background = document.querySelector("body");
+let random = document.querySelector(".random").value;
+random = Math.trunc(Math.random() * 10 + 1);
 
+const background = document.querySelector("body");
 const btnGuess = document.querySelector(".guess");
 const btnReset = document.querySelector(".reset");
 let currentScore = 10;
@@ -171,6 +169,7 @@ function newBackground() {
 
 function resetClicked() {
   currentScore = 10;
+  random = Math.trunc(Math.random() * 10 + 1);
   document.querySelector(".score").textContent = currentScore;
   background.style.backgroundColor = "#FFFFFF";
   document.querySelector(".number").value = "";
