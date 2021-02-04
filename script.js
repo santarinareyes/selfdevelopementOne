@@ -88,9 +88,10 @@
 
 //// SECOND ATTEMPT ////
 
-//START: 2021-02-04 : 16.06
-//DONE: 2021-02-04 : 16:50
+// START: 2021-02-04 : 16.06
 // Goal: Faster, Cleaner
+// DONE: 2021-02-04 : 16:50
+// Achieved? = YES!
 
 // What do we want to do?
 // We want to have a random number to guess using > Math random
